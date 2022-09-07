@@ -1,0 +1,40 @@
+
+# import libraries
+
+import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image, ImageDraw
+from skimage import io
+import time
+
+
+#%%
+
+# Magic numbers
+
+# constants
+# things that need to be changed according to dataset
+NUMLAY = 3
+STACKSIZE = 1001
+
+DATA = 
+
+# variables
+
+
+array = (0,20,200,20,400,20)
+
+def layerprocessing(coorfile, ):
+
+    layerpolygon = []
+
+    # add top line
+    for n in range(11):
+        layerpolygon.append(array[0][n])
+        layerpolygon.append(array[1][n])
+    # add bottom line
+    for n in range(11, -1):
+        layerpolygon.append(array[0][n])
+        layerpolygon.append(array[1][n])
+
+
