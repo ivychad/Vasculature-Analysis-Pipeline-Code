@@ -109,8 +109,8 @@ plt.errorbar(orientation, layer_4[0], label="Layer 4", color="steelblue")
 plt.xticks(range(-90, 91, 45), fontsize=25, fontweight="bold")
 plt.yticks(np.arange(0.4,1.4,0.2), fontsize=25, fontweight="bold")
 plt.ylim((0.2,1.25))
-#plt.ylabel('Percentage of total pixels', fontsize=22, labelpad=20)
-#plt.xlabel('Orientation in degrees', fontsize=22, labelpad=15)
+
+
 #plt.title(data_set_name, fontsize=25, fontweight="bold")
 #leg = plt.legend(loc=(0.65,0.7), fontsize=22, frameon=False)
 #leg = plt.legend(loc=(0.77,0.7), fontsize=22, frameon=False)
