@@ -178,12 +178,13 @@ def straightening_coor(coorfile, layernumber, filename):
                 straight_coord.append(stack_coord[n][i][1])      
         straight_coordinates.append(straight_coord)
 
-    straight_coordinates = np.asarray(straight_coordinates) 
+    straight_coordinates = np.asarray(straight_coordinates)
+    straight_coord_round = np.around(straight_coordinates,2) 
 
     # save to excel file with filename  
-    np.savetxt(filename, straight_coordinates, delimiter=',') 
+    np.savetxt(filename, straight_coord_round, delimiter=',') 
 
 
-#straight_layer1 = straightening_coor(COORFILE, 1, "V1 Layer1 StraightCoor.csv")
-#straight_layer2 = straightening_coor(COORFILE, 2, "V1 Layer2 StraightCoor.csv")
-#straight_layer3 = straightening_coor(COORFILE, 3, "V1 Layer3 StraightCoor.csv")
+#straight_layer1 = straightening_coor(COORFILE, 1, "V2 Layer1 StraightCoor.csv")
+#straight_layer2 = straightening_coor(COORFILE, 2, "V2 Layer2 StraightCoor.csv")
+#straight_layer3 = straightening_coor(COORFILE, 3, "V2 Layer3 StraightCoor.csv")
