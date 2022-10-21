@@ -1,3 +1,7 @@
+## To Do
+
+
+
 
 # import libraries
 
@@ -14,7 +18,7 @@ import tifffile as tif
 # CHANGE WITH EVERY NEW DATASET
 STACKSIZE = 1001
 DATA = "V2 Binary.tif"
-COORFILE = np.asarray(pd.read_excel(r"CoorTemplate.xlsx", sheet_name= "V2"))
+COORFILE = np.asarray(pd.read_excel(r"CoorTemplate.xlsx", sheet_name= "V1"))
 
 
 # Fixed variables
@@ -170,6 +174,7 @@ def straightening_coor(coorfile, layernumber, filename):
     
     straight_coord = []
     straight_coordinates = []
+    straight_coordinates.append([100]*24)
 
     for n in range(STACKSIZE):
         straight_coord = []
@@ -185,6 +190,6 @@ def straightening_coor(coorfile, layernumber, filename):
     np.savetxt(filename, straight_coord_round, delimiter=',') 
 
 
-#straight_layer1 = straightening_coor(COORFILE, 1, "V2 Layer1 StraightCoor.csv")
-#straight_layer2 = straightening_coor(COORFILE, 2, "V2 Layer2 StraightCoor.csv")
-#straight_layer3 = straightening_coor(COORFILE, 3, "V2 Layer3 StraightCoor.csv")
+# straight_layer1 = straightening_coor(COORFILE, 1, "V1 Layer1 StraightCoor.csv")
+# straight_layer2 = straightening_coor(COORFILE, 2, "V1 Layer2 StraightCoor.csv")
+# straight_layer3 = straightening_coor(COORFILE, 3, "V1 Layer3 StraightCoor.csv")
